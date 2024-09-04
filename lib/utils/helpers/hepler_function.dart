@@ -10,7 +10,7 @@ class HeplerFunction {
         return const Color.fromRGBO(254, 112, 102, 1);
       case EmployeeRole.Sale:
         return Colors.orange;
-      case EmployeeRole.Hr:
+      case EmployeeRole.HR:
         return Colors.deepPurpleAccent;
       default:
         return Colors.blue;
@@ -29,6 +29,23 @@ class HeplerFunction {
         }
       default:
         return EmployeeRole.Support.name.toString();
+    }
+  }
+
+  static EmployeeRole getRoleFromString(String role) {
+    switch (role) {
+      case 'Developer':
+        return EmployeeRole.Developer;
+      case 'Sale':
+        return EmployeeRole.Sale;
+      case 'BM':
+        return EmployeeRole.BM;
+      case 'HR':
+        return EmployeeRole.HR;
+      case 'Support':
+        return EmployeeRole.Support;
+      default:
+        return EmployeeRole.Developer; // Default fallback
     }
   }
 
